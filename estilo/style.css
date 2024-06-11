@@ -11,6 +11,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 }
 body,html{
     width: 100vw;
@@ -163,8 +164,8 @@ section.formulario > input{
 }
 div.res , div.rescad{
     display: none;
-    font-size: .8em;
-    color: red;
+    font-size: .9em;
+    color: rgb(255, 0, 0);
     margin-top: -10px;
     text-align: left;
     margin-left: 10px;

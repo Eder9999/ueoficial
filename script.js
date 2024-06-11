@@ -11,11 +11,11 @@ const nomeRegex = /^[a-zA-ZÀ-ÿ\s'-]+$/;
 const mainlog =document.getElementById('lgcnt')
 
 
-seclog.addEventListener('submt',(event)=>{
-  event.preventDefault()
+function validarFormulariolog(event){
+  event.preventDefault();
   emailvalidate()
   senhavalidate()
-})
+}
 
 function validarFormulario(event) {
   event.preventDefault(); // Impede o envio do formulário
@@ -37,7 +37,7 @@ function showLogin(){
     mainlog.style.display='block'
 }
 function seterror(index){
-   labels[index].style.border='2px solid red'
+   labels[index].style.border='2px solid  #ff1f1f'
    res[index].style.display='block'
    
 }
