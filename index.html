@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5a92fc5bc0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilo/style.css">
+    
+</head>
+<body onload="agir()">
+    <main  id="lgcnt">
+        <section class="msg">
+           
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h1>Unreach Global</h1>
+                <p>Seja muito benvindo!</p>
+                <p id="des">Descubra todas as oportunidades agora!!</p>
+                <a href="#" >Sobre nós...</a>
+           
+        </section>
+        <section class="formulario">
+            <h1>Login</h1>
+            <nav>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-google"></i></a>
+            </nav>
+            <form action="" method="post" autocomplete="off" class="formlog">
+                <label for="email" class="label"><i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" id="email"  class=" input required" oninput="emailvalidate()" placeholder="Adicione o seu email.">
+                </label>
+                <div class="res">Adicione um email valido! </div>
+                <label for="senha" class="label"><i class="fa-solid fa-lock"></i>
+                    <input type="password" name="senha" id="senha"  class=" input required" oninput="senhavalidate()" placeholder="Adicione a sua senha">
+                </label>
+                <div class="res">Adicione uma senha !</div>
+                
+               
+            </form>
+            <p>
+                <a href="#">Esqueceu a senha?</a>
+               <button id="criarcnt" onclick="showCadastro()">Criar conta</button>
+            </p>
+            <input type="submit"  value="Entrar">
+        </section>
+    </main>
+
+    <main class="cadastro" id="cadastro">
+        <div class="cabeçalio">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h1>Unreach Global</h1>
+        </div>
+       
+                        
+            <h1>Cadastro</h1>
+            <section class="formcad">
+                
+                <form action="" method="post" class="formcad" autocomplete="off">
+                    <label for="nome" class="labelcad">Nome:</label>
+                    <input type="text" name="nome" id="nome" class="input requiredcad" oninput="namevalidate()" autocomplete="additional-name">
+                    <div class="rescad"> O Nome deve ter 3 ou mais caracteres e  conter apenas letras, coloque o seu nome real.</div>
+
+                    <label for="sobrenome" class="labelcad">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="sobrenome" class="input requiredcad" oninput="lastnamevalidate()" >
+                    <div class="rescad">O Seu sobrenome deve ter 4 ou mais caracteres e deve conter apenas letras! </div>
+
+                    <label for="emailc" class="labelcad">Email:</label>
+                    <input type="email" name="emailc" id="emailcad" class="input requiredcad" oninput="emailcadvalidate()">
+                    <div class="rescad"> Por favor coloque um email valido</div>
+
+                    <label for="senhac" class="labelcad">Senha:</label>
+                    <input type="password" name="senhac" id="senhacad" class="input requiredcad" oninput="senhacadvalidate()">
+                    <div class="rescad"> A sua senha deve conter 8 ou mais caracteres!</div>
+                </form>
+                           <button id="logincnt" onclick="showLogin()">Voltar para login?</button> <br>
+                <input type="submit" value="Criar" onclick="validarFormulario(event)" >
+            </section>           
+     
+    </main> 
+    <script src="script.js"></script>    
+</body>
+</html>

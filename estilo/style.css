@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700; 1.900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-image: url(../imagens/verde4.jpg);     
+   background-position: center center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+}
+/* Espaco formulario */
+main#lgcnt{
+    max-width: 750px;
+    min-width: 600px; 
+    height: 400px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.492);
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    border-radius:15px 0px 15px 0px;
+    overflow: hidden;   
+}
+section{
+    text-align: center;
+    font-size: 1em;
+    margin: auto;
+    padding: 20px;    
+    height: 100%;    
+}
+section.msg {          
+    background-image: linear-gradient(to right, rgb(0, 104, 0), rgba(0, 110, 0, 0.885), rgba(0, 180, 0, 0.852));
+    color: white;
+    float: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+section.msg >  i{
+    font-size: 4em;
+    padding-top: 30px;
+   
+}
+section.msg > h1{
+   margin-bottom: 30px;
+}
+section.msg > p#des{
+    margin-bottom: 100px;
+}
+section.msg > a{   
+    color: white;  
+}
+section.msg > a:hover{
+    text-decoration: underline;
+}
+h1{
+    font-family:'Roboto', cursive;
+}
+p{
+    font-family: 'Open Sans', cursive;    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+section.formulario {
+    background-color: rgba(255, 255, 255, 0.549);
+   float: right;
+   width: 50%;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.formulario > h1{
+    font-size: 2.5em;
+   
+    padding-bottom: 10px;
+}
+section.formulario > nav > a> i{
+    margin:auto;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+  
+}
+section.formulario > nav{
+    margin: 10px;
+}
+
+section.formulario > form > label{
+    border: 1px solid black;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    width: 280px;
+    text-align: left;
+    background-color:rgba(255, 255, 255, 0.522);
+}
+section.formulario > form > label:focus{
+    background-color: white;
+}
+section.formulario > form > label > input{
+    border: none;
+    color:black;
+    width: 230px;
+    padding: 10px;
+    padding-bottom: 0px;
+    outline: none; 
+    font-size: 1em;
+    border-bottom: 1px solid black;
+    background-color:transparent;
+}
+section.formulario > p > a{
+    font-size: 1em;
+    padding: 5px;
+}
+section.formulario > p > a:hover{
+    text-decoration: underline;
+    transition: .3s;
+}
+button#criarcnt{
+    color: rgb(150, 0, 177);
+    border: none;
+    outline: none;
+    font-size: 1em;
+    background-color: transparent;
+}
+button#criarcnt:hover{
+    text-decoration: underline;
+}
+section.formulario > input{
+    padding: 7px;
+    width:150px;
+    font-size: 1em;
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgb(0, 104, 0), rgba(0, 110, 0, 0.885), rgba(0, 180, 0, 0.852));
+    color: white;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+div.res , div.rescad{
+    display: none;
+    font-size: .8em;
+    color: red;
+    margin-top: -10px;
+    text-align: left;
+    margin-left: 10px;
+}
+section.formulario > input:hover{
+    background-image: linear-gradient(to right, rgb(0, 65, 0), rgba(0, 97, 0, 0.923), rgba(0, 148, 0, 0.898)); 
+    transition:background-image .3s ;
+}
+section.formulario > input:active{
+    background-image: linear-gradient(to right, rgb(0, 47, 0), rgb(0, 75, 0), rgba(0, 110, 0, 0.933));
+}
+/* espaco cadastro */
+main.cadastro{
+   
+   max-width: 500px;
+   min-width: 500px;
+   height: 600px;  
+   border-radius: 10px;
+   text-align: center;
+   background-color: rgba(255, 255, 255, 0.522);
+   box-shadow:0px 0px 10px rgba(0, 0, 0, 0.413);
+   position: absolute;
+   top: -50;
+   left: -50;
+    transform: rotate(50-50);
+}
+
+.cabeçalio{
+    text-align:center;  
+    width:120px;
+    padding: 10px;
+}
+.cabeçalio>h1{
+    font-size: 1em;
+    margin-top: -5px;
+    font-family: "Dancing Script", cursive;
+   
+}
+.cabeçalio>i{
+    font-size: 1.2em;
+    font-style: italic;  
+}
+.cadastro>h1{
+    font-size: 2.5em;
+    margin-bottom:15px;
+    color: rgb(0, 0, 0);
+}
+
+
+.cadastro> section>form > input{
+    border: none;
+    color: black;
+    width: 350px;
+    padding: 15px;
+    margin-bottom: 15px;
+    outline: none; 
+    font-size: 1em;
+    border: 1px solid black;
+    background-color:rgba(255, 255, 255, 0.522);
+    
+}
+.cadastro> section>form > input:focus{
+    background-color: white;
+}
+.cadastro> section> form { 
+    width: 350px;
+    padding: 10px;
+    text-align: left; 
+    margin: auto; 
+}
+.cadastro > section> button#logincnt{
+    color: rgb(150, 0, 177);
+    font-size: 1em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.cadastro > section> button#logincnt:hover{
+    text-decoration: underline;
+   
+}
+.cadastro > section> input{
+    padding: 7px;
+    width:150px;
+    font-size: 1em;
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgb(0, 104, 0), rgba(0, 110, 0, 0.885), rgba(0, 180, 0, 0.852));
+    color: white;
+    border: none;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.cadastro > section> input:hover{
+    background-image: linear-gradient(to right, rgb(0, 65, 0), rgba(0, 97, 0, 0.923), rgba(0, 148, 0, 0.898)); 
+    transition: .3s ;  
+}
+.cadastro >section> input:active{
+    background-image: linear-gradient(to right, rgb(0, 47, 0), rgb(0, 75, 0), rgba(0, 110, 0, 0.933));
+}
