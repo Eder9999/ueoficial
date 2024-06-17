@@ -11,19 +11,46 @@ const nomeRegex = /^[a-zA-ZÀ-ÿ\s'-]+$/;
 const mainlog =document.getElementById('lgcnt')
 
 
-function validarFormulariolog(event){
+function validarFormulariolog(event) {
   event.preventDefault();
-  emailvalidate()
-  senhavalidate()
+  emailvalidate();
+  senhavalidate();
+  if (!document.querySelector('.res[style*="display: block"]')) {
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+      const user = JSON.parse(localStorage.getItem(email));
+      if (user && user.senha === senha) {
+          // Armazena o usuário atual no localStorage
+          localStorage.setItem('currentUser', JSON.stringify(user));
+          // Redireciona para a página de boas-vindas
+          window.location.href = 'welcome.html';
+      } else {
+          alert('Email ou senha incorretos. Por favor, verifique suas credenciais.');
+      }
+  }
 }
 
 function validarFormulario(event) {
-  event.preventDefault(); // Impede o envio do formulário
-  namevalidate()
-  lastnamevalidate() 
-  emailcadvalidate()
-  senhacadvalidate()
+  event.preventDefault();
+  namevalidate();
+  lastnamevalidate();
+  emailcadvalidate();
+  senhacadvalidate();
+  if (!document.querySelector('.rescad[style*="display: block"]')) {
+      const email = document.getElementById('emailcad').value;
+      if (localStorage.getItem(email)) {
+          alert('Este email já está registrado. Por favor, use um email diferente.');
+      } else {
+          const nome = document.getElementById('nome').value;
+          const sobrenome = document.getElementById('sobrenome').value;
+          const senha = document.getElementById('senhacad').value;
+          const user = { nome, sobrenome, email, senha };
+          localStorage.setItem(email, JSON.stringify(user));
+          alert('Cadastro efetuado com sucesso!');
+          showLogin();
+      }
   }
+}
 function agir(){
  
     cadastro.style.display='none'   

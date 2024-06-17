@@ -84,7 +84,7 @@ a{
     color: black;
 }
 section.formulario {
-    background-color: rgba(255, 255, 255, 0.549);
+    background-color: rgba(255, 255, 255, 0.355);
    float: right;
    width: 50%;
    display: flex;
@@ -185,7 +185,7 @@ main.cadastro{
    height: 600px;  
    border-radius: 10px;
    text-align: center;
-   background-color: rgba(255, 255, 255, 0.522);
+   background-color:rgba(255, 255, 255, 0.355) ;
    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.413);
    position: absolute;
    top: -50;
